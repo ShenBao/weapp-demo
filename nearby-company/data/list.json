@@ -1,0 +1,22 @@
+{
+    "status": 200,
+    "message": "成功",
+    "data": [
+        {
+            "id": "唯一id",
+            "icon": "图标",
+            "name": "名称",
+            "stars": "评分",
+            "phoneNumber": "电话",
+            "distance": "距离(m)"
+        },
+        {
+            "id": "唯一id",
+            "icon": "图标",
+            "name": "名称",
+            "stars": "评分",
+            "phoneNumber": "电话",
+            "distance": "距离(m)"
+        }
+    ]
+}

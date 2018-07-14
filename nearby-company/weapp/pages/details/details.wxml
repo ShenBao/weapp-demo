@@ -1,0 +1,50 @@
+<!--pages/details/details.wxml-->
+
+<!-- 轮播图 -->
+<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true" indicator-color="#999" indicator-active-color="red">
+    <block wx:for="{{ imgUrls }}" wx:key="index">
+        <swiper-item>
+            <image src="{{item}}" mode="aspectFill" />
+        </swiper-item>
+    </block>
+</swiper>
+
+
+<view class='name'>
+    洛阳浩网络科技有限公司
+</view>
+
+<view class='stars'>评分：
+    <block wx:for="{{ [1,2,3,4,5] }}" wx:key="{{ item }}">
+        <block wx:if="{{ item <= 3 }}">
+            <text class='iconfont icon-xin isstars'></text>
+        </block>
+        <block wx:else>
+            <text class='iconfont icon-xin'></text>
+        </block>
+    </block>
+</view>
+
+<view class='timer'>营业时间：16:00 - 18:00</view>
+
+<view class='phone-number'>电话：18500785643
+    <view class='call'>
+        拨打电话
+    </view>
+</view>
+
+<view class='address'>
+    <view class='text'>地址：</view>
+    <view class='to'>导航</view>
+</view>
+
+<view class='introduce-title'>店铺介绍</view>
+
+<view class='introduce-content'>
+    这是介绍
+    这是介绍
+    这是介绍
+    这是介绍
+    这是介绍
+
+</view>

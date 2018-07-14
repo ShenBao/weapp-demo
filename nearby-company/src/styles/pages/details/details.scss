@@ -1,0 +1,45 @@
+// 轮播图
+.swiper {
+    width: 100%;
+    height: 330rpx;
+    swiper-item {
+        width: 100%;
+        height: 330rpx;
+        image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.name {
+    line-height: 42rpx;
+    font-size: 40rpx;
+    color: #333333;
+}
+
+.stars {
+    color: #b3b3b3;;
+    font-size: 24rpx;
+    .isstars {
+        color: #FF3B30;
+    }
+}
+.timer {
+    color: #b3b3b3;;
+    font-size: 24rpx;
+}
+// .phone-number {
+//     .call {
+//     }
+// }
+// .address {
+//     .text {
+//     }
+//     .to {
+//     }
+// }
+// .introduce-title {
+// }
+// .introduce-content {
+// }

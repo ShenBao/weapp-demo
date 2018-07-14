@@ -1,0 +1,1 @@
+.swiper,.swiper swiper-item{width:100%;height:330rpx}.swiper swiper-item image{width:100%;height:100%}.name{line-height:42rpx;font-size:40rpx;color:#333}.stars,.timer{font-size:24rpx}.stars{color:#b3b3b3}.stars .isstars{color:#FF3B30}.timer{color:#b3b3b3}

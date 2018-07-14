@@ -1,0 +1,9 @@
+<!--pages/location-auth/location-auth.wxml-->
+
+<view class='authorize'>
+    <view class='no-auth-img'>
+        <image src='../../imgs/not-anth.png'></image>
+    </view>
+    <view class='text'> 授权失败 </view>
+    <button class='btn' plain='true' open-type="openSetting" bindopensetting="bindOpenSetting">重新授权</button>
+</view>

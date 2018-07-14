@@ -1,0 +1,77 @@
+/*
+ * @Author: ShenBao 
+ * @Date: 2018-07-14 11:04:40 
+ * @Last Modified by: ShenBao
+ * @Last Modified time: 2018-07-14 15:43:48
+ */
+
+@import '../../base.scss';
+
+.weui-search-bar__cancel-btn {
+    font-size: 16px;
+}
+.shopitem {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    padding: 10rpx;
+    background-color: #FFFFFF;
+    border-bottom: 1rpx solid #e4e4e4;
+    &:last-child {
+        margin-bottom: 0rpx;
+    }
+    .shopicon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        image {
+            width: 154rpx;
+            height: 154rpx;
+        }
+    }
+    .shopInfo {
+        border-color: #FFFFFF;
+        padding: 10rpx 20rpx;
+        box-sizing: border-box;
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        .name {
+            width: 100%;
+            line-height: 42rpx;
+            font-size: 30rpx;
+            color: #333333;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .row {
+            padding: 6rpx 0;
+            color: #b3b3b3;;
+            font-size: 22rpx;
+            .isstars {
+                color: #FF3B30;
+            }
+        }
+    }
+    .location {
+        width: 140rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .img {
+            display: flex;
+            justify-content: center;
+            .iconfont {
+                display: inline-block;
+                font-size: 55rpx !important;
+                color: #242121;
+            }
+        }
+        .text {
+            margin-top: 10rpx;
+            text-align: center;
+            color: #b3b3b3;
+            font-size: 22rpx;
+        }
+    }
+}
