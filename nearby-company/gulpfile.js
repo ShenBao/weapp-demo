@@ -2,7 +2,7 @@
  * @Author: ShenBao
  * @Date: 2018-07-010 16:35:57
  * @Last Modified by: ShenBao
- * @Last Modified time: 2018-07-14 13:43:05
+ * @Last Modified time: 2018-07-14 22:56:33
 */
 
 const gulp = require('gulp');
@@ -26,10 +26,10 @@ const config = {
 const sassStyleHandler = (entry, output) => {
     gulp
         .src(entry)
-        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+        .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(autoprefixer())
-        .pipe(cssmin({advanced: true, keepSpecialComments: '*'}))
-        .pipe(rename({extname: ".wxss"}))
+        .pipe(cssmin({ advanced: true, keepSpecialComments: '*' }))
+        .pipe(rename({ extname: ".wxss" }))
         .pipe(gulp.dest(output));
 };
 
@@ -48,9 +48,6 @@ gulp.task('img', () => {
 });
 
 gulp.task('watch', ['style'], () => {
-    // gulp.watch([
-    //     config.stylePath, config.pagesPath, config.componentsPath, config.stylePath
-    // ], ['style']);
     return gulpWatch(config.stylesPath, () => {
         gulp.start('style');
     });

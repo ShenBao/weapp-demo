@@ -5,16 +5,22 @@
         "id": "唯一id",
         "icon": "图标",
         "banner": [
-            "url1",
-            "url2"
+            {
+                "id": "id",
+                "url": "url"
+            },
+            {
+                "id": "id",
+                "url": "url"
+            }
         ],
         "name": "名称",
         "stars": "评分",
         "startTime": "开始时间",
         "endTime": "结束时间",
         "phoneNumber": "电话",
-        "latitude": "latitude 纬度",
-        "longitude": "longitude 经度",
+        "latitude": "latitude 店铺纬度",
+        "longitude": "longitude 店铺经度",
         "address": "地址",
         "introduce": "介绍"
     }

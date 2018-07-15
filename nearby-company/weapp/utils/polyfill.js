@@ -1,3 +1,10 @@
+/*
+ * @Author: ShenBao 
+ * @Date: 2018-07-15 20:44:49 
+ * @Last Modified by:   ShenBao 
+ * @Last Modified time: 2018-07-15 20:44:49 
+*/
+
 if (!Array.prototype.findIndex) {
   Object.defineProperty(Array.prototype, 'findIndex', {
     value: function(predicate) {

@@ -31,28 +31,40 @@ header:
 {
     "status": 200,
     "message": "成功",
-    "data": [
-        {
-            "id": "唯一id",
-            "icon": "图标",
-            "name": "名称",
-            "stars": "评分",
-            "phoneNumber": "电话",
-            "distance": "距离(m)",
-            "latitude": "latitude 店铺纬度",
-            "longitude": "longitude 店铺经度"
-        },
-        {
-            "id": "唯一id",
-            "icon": "图标",
-            "name": "名称",
-            "stars": "评分",
-            "phoneNumber": "电话",
-            "distance": "距离(m)",
-            "latitude": "latitude 店铺纬度",
-            "longitude": "longitude 店铺经度"
-        }
-    ]
+    "data": {
+        "banner": [
+            {
+                "id": "id",
+                "url": "url"
+            },
+            {
+                "id": "id",
+                "url": "url"
+            }
+        ],
+        "list": [
+            {
+                "id": "唯一id",
+                "icon": "图标",
+                "name": "名称",
+                "stars": "评分",
+                "phoneNumber": "电话",
+                "distance": "距离(m)",
+                "latitude": "latitude 店铺纬度",
+                "longitude": "longitude 店铺经度"
+            },
+            {
+                "id": "唯一id",
+                "icon": "图标",
+                "name": "名称",
+                "stars": "评分",
+                "phoneNumber": "电话",
+                "distance": "距离(m)",
+                "latitude": "latitude 店铺纬度",
+                "longitude": "longitude 店铺经度"
+            }
+        ]
+    }
 }
 ```
 
@@ -78,10 +90,6 @@ header:
     "data": {
         "id": "唯一id",
         "icon": "图标",
-        "banner": [
-            "url1",
-            "url2"
-        ],
         "name": "名称",
         "stars": "评分",
         "startTime": "开始时间",
@@ -98,4 +106,4 @@ header:
 
 
 
-by ShenBao 2018.07.14
+by ShenBao 2018.07.15

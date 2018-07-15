@@ -1,3 +1,9 @@
+/*
+ * @Author: ShenBao 
+ * @Date: 2018-07-15 20:44:20 
+ * @Last Modified by:   ShenBao 
+ * @Last Modified time: 2018-07-15 20:44:20 
+*/
 
 function getTimeFormat(time, format) {
   var t = new Date(time);
