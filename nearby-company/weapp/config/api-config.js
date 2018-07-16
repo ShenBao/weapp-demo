@@ -5,12 +5,15 @@
  * @Last Modified time: 2018-07-15 20:46:23 
 */
 // host
-let host = 'https://www.host.cn/';
+let host = 'https://wx.hougeauto.com/app/';
 
 let apiConfig = {
-  host,
-  // 登录
-  loginUrl: `${host}login.json`
+	host,
+	// 列表
+	lists: `${host}lists`,
+	// 详情
+	info: `${host}info`
+
 };
 
 module.exports = apiConfig;

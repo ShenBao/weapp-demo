@@ -2,12 +2,12 @@
 
 <block wx:if="{{ !isShowLoading }}">
 
-	<!-- 搜索 -->
+    <!-- 搜索 -->
     <view class="weui-search-bar">
         <view class="weui-search-bar__form">
             <view class="weui-search-bar__box">
                 <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-                <input type="text" confirm-type="search" class="weui-search-bar__input" placeholder="请输入关键字" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                <input type="text" confirm-type="search" class="weui-search-bar__input" placeholder="请输入关键字" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="bindconfirmHandle" />
                 <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
                     <icon type="clear" size="14"></icon>
                 </view>
@@ -21,26 +21,26 @@
 
     <!-- 轮播图 -->
     <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true" indicator-color="#999" indicator-active-color="red">
-        <block wx:for="{{ imgUrls }}" wx:key="index">
+        <block wx:for="{{ banner }}" wx:key="index">
             <swiper-item>
                 <image src="{{item}}" mode="aspectFill" />
             </swiper-item>
         </block>
     </swiper>
 
-	<!-- 列表 -->
-    <view class='shopitem' bindtap='toDetailsHandle' wx:for="{{ [4,3,2,5,1,3,6] }}" wx:key="item" data-item='{{ item }}'>
+    <!-- 列表 -->
+    <view class='shopitem' bindtap='toDetailsHandle' wx:for="{{ lists }}" wx:key="{{{ item.id }}" data-item='{{ item }}'>
         <view class='shopicon'>
-            <image src="{{ defaultShopImg }}"></image>
+            <image src="{{ item.icon }}"></image>
         </view>
 
         <view class="shopInfo">
             <view class='name'>
-                洛阳浩网络科技有限公司
+                {{ item.name }}
             </view>
             <view class='row'>评分：
                 <block wx:for="{{ [1,2,3,4,5] }}" wx:key="{{ starItem }}" wx:for-item="starItem">
-                    <block wx:if="{{ starItem <= item }}">
+                    <block wx:if="{{ starItem <= item.score }}">
                         <text class='iconfont icon-xin isstars'></text>
                     </block>
                     <block wx:else>
@@ -48,10 +48,10 @@
                     </block>
                 </block>
             </view>
-            <view class='row'>电话：18500785643</view>
-            <view class='row'>距离：856.65km</view>
+            <view class='row'>电话：{{ item.tel }}</view>
+            <view class='row'>距离：{{ item.distance }}km</view>
         </view>
-        <view class='location' catchtap='toOpenLocationHandle'>
+        <view class='location' catchtap='toOpenLocationHandle' data-item='{{ item }}'>
             <view class='img'>
                 <text class='iconfont icon-daohang1'></text>
             </view>

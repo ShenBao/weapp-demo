@@ -2,11 +2,16 @@
  * @Author: ShenBao 
  * @Date: 2018-07-15 00:38:59 
  * @Last Modified by: ShenBao
- * @Last Modified time: 2018-07-15 00:39:33
+ * @Last Modified time: 2018-07-16 22:34:26
  */
 // pages/details/details.js
 
-import wxRequest from '../../requests/index.js';
+import requests from '../../requests/index.js';
+const {
+    getInfo
+} = requests;
+
+import Mindex from '../../models/index.js'
 
 Page({
 
@@ -15,17 +20,22 @@ Page({
      */
     data: {
 
-		isShowLoading: true
+        isShowLoading: true,
+
+        indicatorDots: false,
+        autoplay: true,
+        interval: 5000,
+        duration: 1000,
 
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
 
-		let routeUrl = this.route;
-		console.log(routeUrl);
+        let routeUrl = this.route;
+        console.log(routeUrl);
 
         let id = options.id;
 
@@ -49,60 +59,58 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
 
     },
 
     /**
      * 拨打电话
      */
-    makePhoneCallHandle: function(event) {
+    makePhoneCallHandle: function (event) {
 
-        let item = event.currentTarget.dataset.item;
-
-        let phoneNumber = '123456789';
+        let phoneNumber = this.data.info.tel;
 
         wx.makePhoneCall({
             phoneNumber: phoneNumber
@@ -113,19 +121,15 @@ Page({
      * 一键导航
      */
 
-    toOpenLocationHandle: function(event) {
+    toOpenLocationHandle: function (event) {
 
-        let item = event.currentTarget.dataset.item;
-
-        let latitude = 40.046494;
-        let longitude = 116.34306;
+        let { latitude, longitude, name, address } = this.data.info;
 
         wx.openLocation({
-            latitude: latitude,
-            longitude: longitude,
-            scale: 28,
-            name: '测试地址',
-            address: '北京市朝阳区大屯路枫林绿洲底商（中国科学院天地科学园区对面）'
+            latitude: Number(latitude),
+            longitude: Number(longitude),
+            name,
+            address
         });
 
     },
@@ -133,19 +137,37 @@ Page({
     /**
      * getDetails
      */
-    getDetails: function(opts) {
+    getDetails: function (opts) {
 
-        console.log(opts);
 
-		wx.showLoading({
-			title: '加载中',
-		});
+        getInfo({
+            data: opts,
+            success: (res) => {
 
-		this.setData({
-			isShowLoading: false
-		});
+                let {
+                    statusCode,
+                    errMsg,
+                    data
+                } = res;
+                if (data.status !== 200) {
+                    console.log('status !== 200');
+                    return;
+                }
 
-		wx.hideLoading();
+                let info = Mindex.Minfo(data.data);
+                let setData = {
+                    info,
+                    isShowLoading: false
+                }
+
+                this.setData(
+                    setData
+                );
+            },
+            fail: (res) => {
+                console.log(res);
+            }
+        });
 
     }
 })

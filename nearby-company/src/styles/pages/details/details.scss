@@ -2,11 +2,25 @@
  * @Author: ShenBao 
  * @Date: 2018-07-15 00:37:04 
  * @Last Modified by: ShenBao
- * @Last Modified time: 2018-07-15 13:23:41
+ * @Last Modified time: 2018-07-16 23:04:12
 */
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+// 轮播图
+.swiper {
+    width: 100%;
+    height: 330rpx;
+    swiper-item {
+        width: 100%;
+        height: 330rpx;
+        image {
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 
 .info {
