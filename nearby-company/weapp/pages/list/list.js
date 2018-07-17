@@ -1,9 +1,10 @@
 /*
- * @Author: ShenBao 
- * @Date: 2018-07-15 00:39:42 
- * @Last Modified by: ShenBao
- * @Last Modified time: 2018-07-16 22:34:22
- */
+ * @Author: ShenBao shenbaoone@gmail.com 
+ * @Date: 2018-07-17 21:50:45 
+ * @Last Modified by: ShenBao shenbaoone@gmail.com 
+ * @Last Modified time: 2018-07-17 21:50:45 
+*/
+
 // pages/list/list.js
 
 import requests from '../../requests/index.js';

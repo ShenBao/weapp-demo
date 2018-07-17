@@ -1,8 +1,8 @@
 /*
- * @Author: ShenBao 
- * @Date: 2018-07-15 20:44:20 
- * @Last Modified by:   ShenBao 
- * @Last Modified time: 2018-07-15 20:44:20 
+ * @Author: ShenBao shenbaoone@gmail.com 
+ * @Date: 2018-07-17 21:51:16 
+ * @Last Modified by: ShenBao shenbaoone@gmail.com 
+ * @Last Modified time: 2018-07-17 21:51:16 
 */
 
 function getTimeFormat(time, format) {

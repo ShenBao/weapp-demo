@@ -1,9 +1,10 @@
 /*
- * @Author: ShenBao 
- * @Date: 2018-07-15 20:46:37 
- * @Last Modified by:   ShenBao 
- * @Last Modified time: 2018-07-15 20:46:37 
+ * @Author: ShenBao shenbaoone@gmail.com 
+ * @Date: 2018-07-17 21:49:33 
+ * @Last Modified by: ShenBao shenbaoone@gmail.com 
+ * @Last Modified time: 2018-07-17 21:49:33 
 */
+
 
 // 资源公共地址
 let imageUrl = 'http://img.host.cn/';

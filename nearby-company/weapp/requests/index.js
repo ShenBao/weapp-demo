@@ -1,9 +1,10 @@
 /*
- * @Author: ShenBao 
- * @Date: 2018-07-15 20:44:01 
- * @Last Modified by: ShenBao
- * @Last Modified time: 2018-07-16 22:25:59
+ * @Author: ShenBao shenbaoone@gmail.com 
+ * @Date: 2018-07-17 21:50:51 
+ * @Last Modified by: ShenBao shenbaoone@gmail.com 
+ * @Last Modified time: 2018-07-17 21:50:51 
 */
+
 
 import wxRequest from './wxRequest';
 import getLists from './lists';

@@ -1,9 +1,10 @@
 /*
- * @Author: ShenBao 
- * @Date: 2018-07-15 00:39:47 
- * @Last Modified by:   ShenBao 
- * @Last Modified time: 2018-07-15 00:39:47 
- */
+ * @Author: ShenBao shenbaoone@gmail.com 
+ * @Date: 2018-07-17 21:50:21 
+ * @Last Modified by: ShenBao shenbaoone@gmail.com 
+ * @Last Modified time: 2018-07-17 21:50:21 
+*/
+
 // pages/auth-location/auth-location
 
 Page({
