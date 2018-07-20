@@ -1,0 +1,4 @@
+<!--components/component/component.wxml-->
+
+<button bindtap='eventTap'>值传到主页面</button>
+

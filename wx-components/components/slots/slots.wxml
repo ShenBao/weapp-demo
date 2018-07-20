@@ -1,0 +1,10 @@
+<!--components/slots/slots.wxml-->
+
+<view>
+    <view class="container">
+        <view>hello, 这是slot组件</view>
+        <view> {{my_properties}}</view>
+        <slot name="slot1"></slot>
+        <slot name="slot2"></slot>
+    </view>
+</view>

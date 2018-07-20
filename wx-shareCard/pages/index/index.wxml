@@ -1,0 +1,7 @@
+
+
+ <button class='btn' plain='true' open-type="openSetting" bindopensetting="">重新授权</button>
+
+<button bindtap='saveImg' >生成图片，保存至相册</button>
+
+<canvas canvas-id="shareCanvas" style="width:375px;height:580px"></canvas>

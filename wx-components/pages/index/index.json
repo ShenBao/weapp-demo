@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "dialogComponent": "/components/dialog/dialog",
+        "slotComponent": "/components/slot/slot",
+        "slotsComponent": "/components/slots/slots",
+        "component": "/components/component/component"
+    }
+}

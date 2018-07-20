@@ -1,0 +1,38 @@
+<!--index.wxml-->
+
+<dialogComponent id='dialog' 
+    title='我是标题' 
+    content='这是一个dialog组件这是一个dialog组件这是一个dialog组件这是一个dialog组件这是一个dialog组件这是一个dialog组件' 
+    cancelText='知道了' 
+    confirmText='谢谢你'
+    bind:cancelEvent="_cancelEvent"  
+    bind:confirmEvent="_confirmEvent">
+</dialogComponent>
+
+<view class="container">
+    <button bindtap='showDialog'>showDialog</button>
+</view>
+
+<view class='container'>
+   <component  bind:click_btn='mianPageTap'/>
+</view>
+
+
+<view class='container'>
+    <view>单slot模式</view>
+    <slotComponent id="slot" my_properties="这是传进入的slotComponent属性">
+        <text>我是被slot插入的文本</text>
+    </slotComponent>
+</view>
+
+<view class='container'>
+    <view>多slot模式</view>
+    <slotComponent id="slot" my_properties="这是传进入的slotComponent属性">
+        <view slot="slot1">我是被slot1插入的文本</view>
+        <view slot="slot2">我是被slot2插入的文本</view>
+    </slotComponent>
+</view>
+
+
+
+

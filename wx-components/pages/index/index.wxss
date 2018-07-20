@@ -1,0 +1,5 @@
+/**index.wxss**/
+
+.container {
+    font-size: 32rpx;
+}
